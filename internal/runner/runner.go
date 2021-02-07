@@ -729,7 +729,6 @@ type Result struct {
 	Pipeline      bool           `json:"pipeline,omitempty"`
 	HTTP2         bool           `json:"http2"`
 	CDN           bool           `json:"cdn,omitempty"`
-	ResponseTime  string         `json:"response-time"`
 }
 
 // JSON the result
