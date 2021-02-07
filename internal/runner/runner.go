@@ -151,7 +151,7 @@ func New(options *Options) (*Runner, error) {
 	scanopts.OutputIP = options.OutputIP
 	scanopts.OutputCName = options.OutputCName
 	scanopts.OutputCDN = options.OutputCDN
-	scanopts.OutputResponseTime = false
+
 	scanopts.NoFallback = options.NoFallback
 
 	// output verb if more than one is specified
@@ -654,9 +654,7 @@ retry:
 		builder.WriteString(" [cdn]")
 	}
 
-	if scanopts.OutputResponseTime {
-		builder.WriteString(fmt.Sprintf(" [%s]", resp.Duration))
-	}
+
 
 	// store responses in directory
 	if scanopts.StoreResponse {
@@ -700,8 +698,7 @@ retry:
 		IP:            ip,
 		IPs:           ips,
 		CNAMEs:        cnames,
-		CDN:           isCDN,
-		ResponseTime:  resp.Duration.String(),
+		CDN:           isCDN
 	}
 }
 
