@@ -698,7 +698,7 @@ retry:
 		IP:            ip,
 		IPs:           ips,
 		CNAMEs:        cnames,
-		CDN:           isCDN
+		CDN:           isCDN,
 	}
 }
 
