@@ -151,7 +151,7 @@ func New(options *Options) (*Runner, error) {
 	scanopts.OutputIP = options.OutputIP
 	scanopts.OutputCName = options.OutputCName
 	scanopts.OutputCDN = options.OutputCDN
-	scanopts.OutputResponseTime = options.OutputResponseTime
+	scanopts.OutputResponseTime = false
 	scanopts.NoFallback = options.NoFallback
 
 	// output verb if more than one is specified
